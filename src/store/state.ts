@@ -13,10 +13,12 @@ export interface IState {
 }
 
 export const state: IState = {
-  activeStageId: "0",
+  // I decided to leave this redundant (in current approach) stage's structure and set a rootStage as initial
+  // to make it easier to add new stages in the future
+  activeStageId: "rootStage",
   stages: {
-    "0": {
-      id: "0",
+    rootStage: {
+      id: "rootStage",
       type: "stage",
       children: [],
     },
