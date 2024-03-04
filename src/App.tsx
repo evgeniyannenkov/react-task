@@ -1,5 +1,5 @@
-import { AppContextProvider } from "./containers/app-context-provider";
-import { Editor } from "./containers/editor";
+import { AppContextProvider } from "./app/app-context-provider";
+import { Editor } from "./components/editor";
 
 export const App = () => (
   <AppContextProvider>

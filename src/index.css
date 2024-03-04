@@ -190,6 +190,7 @@ h6 {
 
 .section-header {
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .action {

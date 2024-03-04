@@ -11,7 +11,9 @@ export const EditorStaticExample: FC = () => (
     <Stage onSelect={() => console.log("Stage selected")}>
       <Row onSelect={() => console.log("Row selected")}>
         <Column onSelect={() => console.log("Column selected")}>
-          <Markdown className="text-align-center"># Animals of the World</Markdown>
+          <Markdown className="text-align-center" text="kek">
+            # Animals of the World
+          </Markdown>
         </Column>
       </Row>
       <Row>
@@ -27,24 +29,24 @@ export const EditorStaticExample: FC = () => (
       </Row>
       <Row>
         <Column>
-          <Markdown className="text-align-left">
+          <Markdown text="kek" className="text-align-left">
             Photo by [Linnea Sandbakk](https://unsplash.com/photos/HQqIOc8oYro)
           </Markdown>
         </Column>
         <Column>
-          <Markdown className="text-align-center">
+          <Markdown text="kek" className="text-align-center">
             Photo by [Jordan Whitt](https://unsplash.com/photos/EerxztHCjM8)
           </Markdown>
         </Column>
         <Column>
-          <Markdown className="text-align-right">
+          <Markdown text="kek" className="text-align-right">
             Photo by [Donnie Ray Crisp](https://unsplash.com/photos/cpL9skvSypI)
           </Markdown>
         </Column>
       </Row>
       <Row>
         <Column>
-          <Markdown>
+          <Markdown text="kek">
             “Immensely powerful though we are today, it’s equally clear that we’re going to be even more powerful
             tomorrow. And what’s more there will be greater compulsion upon us to use our power as the number of human
             beings on Earth increases still further. Clearly we could devastate the world. As far as we know, the Earth
@@ -54,7 +56,9 @@ export const EditorStaticExample: FC = () => (
       </Row>
       <Row>
         <Column>
-          <Markdown className="text-align-right">— David Attenborough</Markdown>
+          <Markdown text="kek" className="text-align-right">
+            — David Attenborough
+          </Markdown>
         </Column>
       </Row>
       <Row />
@@ -64,10 +68,10 @@ export const EditorStaticExample: FC = () => (
       <Row>
         <Column selected>Selected column</Column>
         <Column>
-          <Markdown>{"**Bold text**\n\n*Italic text*"}</Markdown>
+          <Markdown text="kek">{"**Bold text**\n\n*Italic text*"}</Markdown>
         </Column>
         <Column>
-          <Markdown>Hippopotomonstrosesquippedaliophobia</Markdown>
+          <Markdown text="kek">Hippopotomonstrosesquippedaliophobia</Markdown>
         </Column>
         <Column>
           <ImagePlaceholder />
