@@ -1,10 +1,10 @@
 import { FC, PropsWithChildren, useReducer, useEffect } from "react";
-import { reducer, state as defaultInitialState } from "../../state";
+import { reducer, state as initialState } from "../../state";
 import { AppStateContext } from "./app-state-context";
 import { LocalStorageKeys } from "../../constants";
 
 export const AppContextProvider: FC<PropsWithChildren> = ({ children }) => {
-  const getInitialState = () => {
+  const initState = () => {
     const savedState = localStorage.getItem(LocalStorageKeys.AppState);
     if (savedState) {
       try {
@@ -13,12 +13,11 @@ export const AppContextProvider: FC<PropsWithChildren> = ({ children }) => {
         console.error(e);
       }
     }
-    return defaultInitialState;
+    return initialState;
   };
 
-  const [state, dispatch] = useReducer(reducer, getInitialState());
+  const [state, dispatch] = useReducer(reducer, initState());
   useEffect(() => {
-    console.log("STATE", state);
     // localStorage.setItem(LocalStorageKeys.AppState, JSON.stringify(state));
   }, [state]);
 

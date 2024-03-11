@@ -1,4 +1,4 @@
-import { FC, Fragment, memo } from "react";
+import { FC, Fragment } from "react";
 import { useSidebar } from "./useSidebar";
 import { EntityRef } from "../../domain/interfaces/entity";
 
