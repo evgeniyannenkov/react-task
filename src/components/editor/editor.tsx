@@ -5,9 +5,7 @@ import { useAppStateContext } from "../../app/app-context-provider";
 
 export const Editor: FC = () => {
   const { state } = useAppStateContext();
-
   const root = state.stages["root"];
-  console.log("root", root);
 
   return (
     <div className="editor">

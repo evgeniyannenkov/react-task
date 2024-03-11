@@ -18,6 +18,7 @@ export const AppContextProvider: FC<PropsWithChildren> = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, initState());
   useEffect(() => {
+    console.log("state changed", state);
     // localStorage.setItem(LocalStorageKeys.AppState, JSON.stringify(state));
   }, [state]);
 

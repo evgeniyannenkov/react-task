@@ -16,7 +16,7 @@ export interface ILayout extends IEntity {
 
 export abstract class Layout extends EntityBase implements ILayout {
   protected children: (Layout | Content)[] = [];
-  isLeaf: boolean = true;
+  isLeaf: boolean = false;
 
   public addChild(entity: Layout | Content): void {
     entity.parentRef = this.toRef();
