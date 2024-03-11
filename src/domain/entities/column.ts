@@ -21,6 +21,6 @@ export class Column extends Layout {
   }
 
   getSettingsComponent(): FC {
-    return () => ColumnSettings(this);
+    return ColumnSettings as FC;
   }
 }

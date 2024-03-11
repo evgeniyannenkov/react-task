@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Markdown as MarkdownComponent, MarkdownSettings } from "../../components/markdown";
 import { IContent, Content } from "../interfaces/content";
 import { EntityTypes, EntityId } from "../interfaces/entity";
@@ -27,8 +28,8 @@ export class Markdown extends Content implements IContent, IMarkdown {
     return (props: T) => MarkdownComponent({ ...props, ...this.getData() });
   }
 
-  getSettingsComponent<T>() {
-    return () => MarkdownSettings(this.toRef());
+  getSettingsComponent(): FC {
+    return MarkdownSettings as FC;
   }
 
   setData(data: Partial<IMarkdown>): void {

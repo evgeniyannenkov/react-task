@@ -18,7 +18,6 @@ export const useContentSelector = () => {
   const activeContent = children && children[0];
 
   const select = (type: ContentComponentTypes) => {
-    console.log("select", type);
     dispatch({
       type: ActionTypes.AddEntity,
       payload: {

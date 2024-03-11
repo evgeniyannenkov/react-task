@@ -13,7 +13,6 @@ export function selectEntityActionHandler(state: IState, action: SelectEntityAct
 
 export function addEntityActionHandler(state: IState, action: AddEntityAction) {
   const { parentRef, type, data } = action.payload;
-  console.log("addEntityActionHandler", action.payload);
 
   const parentCollectionKey = `${parentRef.type}s` as keyof StateCollectionLayoutKeys;
   const collectionKey = `${type}s` as keyof StateCollectionKeys;

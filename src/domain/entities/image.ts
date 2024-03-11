@@ -1,3 +1,4 @@
+import { FC } from "react";
 import { Image as ImageComponent, ImageSettings } from "../../components/image";
 import { IContent, Content } from "../interfaces/content";
 import { EntityId, EntityTypes } from "../interfaces/entity";
@@ -19,15 +20,15 @@ export class Image extends Content implements IContent, IImage {
     return { src: this.src };
   }
 
+  setData(data: Partial<IImage>): void {
+    this.src = data?.src ?? this.src;
+  }
+
   getComponent<T>() {
     return (props: T) => ImageComponent({ ...props, ...this.getData() });
   }
 
-  getSettingsComponent<T>() {
-    return (props: T) => ImageSettings({ ...props, ...this.toRef(), ...this.getData() });
-  }
-
-  setData(data: Partial<IImage>): void {
-    this.src = data?.src ?? this.src;
+  getSettingsComponent(): FC {
+    return ImageSettings as FC;
   }
 }

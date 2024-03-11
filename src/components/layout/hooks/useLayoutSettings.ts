@@ -1,16 +1,15 @@
 import { useAppStateContext } from "../../../app/app-context-provider";
 import { ActionTypes } from "../../../types";
 import { EntitiesTree } from "../../../domain/EntitiesTree";
-import { EntityTypes } from "../../../domain/interfaces/entity";
+import { EntityTypes, EntityRef } from "../../../domain/interfaces/entity";
 
-export const useLayoutSettings = (type: EntityTypes) => {
+export const useLayoutSettings = (entityRef: EntityRef) => {
   const { state, dispatch } = useAppStateContext();
 
   const entityTree = EntitiesTree.getInstance();
-  const actions = entityTree.getChildren(type);
+  const actions = entityTree.getChildren(entityRef.type);
 
   function handleAdd(targetType: EntityTypes) {
-    console.log("handleAdd", targetType);
     dispatch({
       type: ActionTypes.AddEntity,
       payload: {

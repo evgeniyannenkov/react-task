@@ -13,6 +13,6 @@ export class Stage extends Layout {
   }
 
   getSettingsComponent(): FC {
-    return () => StageSettings(this);
+    return StageSettings as FC;
   }
 }

@@ -15,6 +15,6 @@ export class Row extends Layout {
   }
 
   getSettingsComponent(): FC {
-    return () => RowSettings(this);
+    return RowSettings as FC;
   }
 }

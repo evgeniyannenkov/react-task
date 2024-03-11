@@ -6,7 +6,6 @@ import { EntityRef } from "../../domain/interfaces/entity";
 interface MarkdownSettingsComponent extends EntityRef {}
 
 export const MarkdownSettings: FC<MarkdownSettingsComponent> = ({ ...entityRef }) => {
-  console.log("entityRef", entityRef);
   const { getIcon, updateContent, data } = useMarkdownSettings(entityRef);
   const { alignment, text } = data;
 
@@ -17,7 +16,6 @@ export const MarkdownSettings: FC<MarkdownSettingsComponent> = ({ ...entityRef }
         <label>Alignment</label>
         <div className="button-group">
           {Object.values(TextAlignmentTypes).map((alignmentType) => {
-            console.log("alignment", alignmentType);
             const Icon = getIcon(alignmentType);
             return (
               <button
